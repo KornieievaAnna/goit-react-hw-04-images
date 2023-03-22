@@ -7,6 +7,7 @@ export function ImageGallery({ images, openModal, modalUrl }) {
     <ImageGalleryStyled>
       {images.map(image => (
         <ImageGalleryItem
+          key={image.id}
           image={image}
           openModal={openModal}
           getModalUrl={modalUrl}

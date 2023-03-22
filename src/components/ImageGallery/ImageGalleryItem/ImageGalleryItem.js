@@ -6,7 +6,6 @@ import {
 export default function ImageGalleryItem({ image, openModal, getModalUrl}) {
   return (
         <ImageGalleryItemStyled
-          key={image.id}
           onClick={() => getModalUrl(image.largeImageURL)}
         >
           <ImageGalleryItemImage
