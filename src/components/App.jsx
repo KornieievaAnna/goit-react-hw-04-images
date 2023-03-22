@@ -18,10 +18,10 @@ export function App() {
     if (q === '') {
       return;
     }
-    
+
     setLoading(true);
     getHits(q, page, perPage);
-  }, [q, page]);
+  }, [q, page, perPage]);
 
   const getHits = async (name, page, perpage) => {
     try {
