@@ -5,10 +5,12 @@ import { Searchbar, Modal, Button, Loader, ImageGallery } from './index';
 import Notiflix from 'notiflix';
 import * as Api from 'service/api';
 
+const perPage = 12;
+
 export function App() {
   const [q, setQ] = useState('');
   const [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(12);
+  // const [perPage, setPerPage] = useState(12);
   const [showModal, setShowModal] = useState(false);
   const [modalUrl, setModalUrl] = useState('');
   const [hits, setHits] = useState([]);
@@ -21,7 +23,7 @@ export function App() {
 
     setLoading(true);
     getHits(q, page, perPage);
-  }, [q, page, perPage]);
+  }, [q, page]);
 
   const getHits = async (name, page, perpage) => {
     try {
