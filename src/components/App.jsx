@@ -16,8 +16,9 @@ export function App() {
 
   useEffect(() => {
     if (q === '') {
-      return
-     }
+      return;
+    }
+    
     setLoading(true);
     getHits(q, page, perPage);
   }, [q, page]);
